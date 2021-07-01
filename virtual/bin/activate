@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="/home/angela/moringa-core/my-gallery/virtual"
+VIRTUAL_ENV="/home/ghost/projects/Moringa-Projects/Core/Django/Gallery/virtual"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
