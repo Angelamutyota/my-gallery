@@ -17,7 +17,9 @@
     {% for images in image %}
       <div class="col-sm-6 col-md-3">
           <h1>{{images.category}}</h1>
-          <img src="{{images.image.url}}" alt="image">
+          <img src="{{images.image.url}}" alt="image" width="300px">
+          <p>{{images.name}}</p>
+          <p>{{images.desc}}</p>
       </div>
     {% endfor %}
   {% endif %}
