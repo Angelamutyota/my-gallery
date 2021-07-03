@@ -1,12 +1,16 @@
 {% extends  'base.html'%}
 
 {% block content %}
-
-<h1>welcome To My Gallery</h1>
-
-{% for image in images %}
+<div class="container-fluid">
+    <div class="jumbotron ">
+        <h1>Welcome To My Gallery</h1>
+    </div>
+</div>
+<div class="container-fluid">
+    {% for image in images %}
     <img src="{{image.image.url}}" alt="Image" class="img-responsive" alt="Image" width="300px">
     <p>{{image.name}}</p>
     {{image.desc}}
 {%endfor%}
+</div>
 {%endblock%}
