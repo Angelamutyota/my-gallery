@@ -9,3 +9,9 @@ class LocationTestClass(TestCase):
     # Testing  instance
     def test_instance(self):
         self.assertTrue(isinstance(self.nairobi,Location))
+    # Testing Save Method
+    def test_save_method(self):
+        self.nairobi.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
+
