@@ -2,3 +2,8 @@ h1{ color: rgb(0, 34, 128);}
 h2{
     color: rgb(186, 153, 196);
 }
+body{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(https://i.pinimg.com/originals/0d/ce/c5/0dcec55178763f057784a72903e1147d.jpg);
+}
