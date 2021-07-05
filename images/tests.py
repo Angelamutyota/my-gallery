@@ -6,3 +6,6 @@ class LocationTestClass(TestCase):
     # Set up method
     def setUp(self):
         self.nairobi = Location(name= 'Nairobi')
+    # Testing  instance
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nairobi,Location))
