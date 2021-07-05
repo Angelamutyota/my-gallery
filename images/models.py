@@ -41,7 +41,6 @@ class Image(models.Model):
     category = models.ForeignKey(Category,on_delete=models.CASCADE)
     uploaded_on = models.DateTimeField(auto_now_add=True)
 
-
     def __str__(self):
         return self.image.url
 
