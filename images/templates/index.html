@@ -7,10 +7,17 @@
     </div>
 </div>
 <div class="container-fluid">
+ <div class="card-columns">
     {% for image in images %}
-    <img src="{{image.image.url}}" alt="Image" class="img-responsive" alt="Image" width="300px">
-    <p>{{image.name}}</p>
-    {{image.desc}}
-{%endfor%}
+    <div class="card" data-toggle="modal" data-target="#{{image.id}}">
+        <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img" width="300px">
+        <h1>{{image.name}}</h1>
+        <p>{{image.desc}}</p>
+    </div>
+
+
+    
+    {% endfor %}
+ </div>
 </div>
 {%endblock%}
