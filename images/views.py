@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http  import HttpResponse, Http404
 from .models import Location, Category, Image
 from django.core.exceptions import ObjectDoesNotExist
+import subprocess
 
 # Create your views here.
 def welcome(request):
@@ -27,4 +28,3 @@ def image(request,image_id):
    except ObjectDoesNotExist:
       raise Http404()
    return render(request,"image.html", {"image":image})
-
