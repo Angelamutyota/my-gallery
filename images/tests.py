@@ -28,6 +28,10 @@ class ImageTestClass(TestCase):
         self.new_image= Image(image='image.jpg', name = 'imagetest', desc= 'this is a test', loc= self.nairobi, category= self.nature)
         self.new_image.save()
 
+    def tearDown(self):
+        Image.objects.all().delete()
+        Location.objects.all().delete()
+        Category.objects.all().delete()
 
     
       
