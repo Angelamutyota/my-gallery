@@ -1,4 +1,4 @@
-# Picture-Globe  
+# My-Gallery 
 ## Author  
   
 >[Angela-Mutyota]  
