@@ -1,6 +1,5 @@
 from django.db import models
 import datetime as dt
-import pyperclip
 
 # Create your models here.
 class Location(models.Model):
@@ -72,9 +71,5 @@ class Image(models.Model):
         images = cls.objects.all()
         return images
     
-    @classmethod
-    def copy_image(cls,image_id):
-        image_found = Image.find_by_id(image_id)
-        pyperclip.copy(image_found.image)
 
 
