@@ -16,8 +16,8 @@ class LocationTestClass(TestCase):
         self.assertTrue(len(locations) > 0)
 
 class ImageTestClass(TestCase):
-    # Creating a new location and saving it
     def setUp(self):
+        # Creating a new location and saving it
         self.nairobi = Location(name= 'Nairobi')
         self.nairobi.save_location()
 
@@ -25,13 +25,5 @@ class ImageTestClass(TestCase):
         self.nature.save_category()
 
 
-        self.new_image= Image(image='image.jpg', name = 'imagetest', desc= 'this is a test', loc= self.nairobi, category= self.nature)
-        self.new_image.save()
-
-
-    # Creating a new category and saving it
-    def test_save_method(self):
-        self.nature = Category(name = 'nature')
-        self.nature.save_category()
     
       
