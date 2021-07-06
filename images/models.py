@@ -64,17 +64,17 @@ class Image(models.Model):
     
     @classmethod
     def filter_by_location(cls,location):
-        images = Image.objects.filter(location=location).all()
-        return images.url
+        images = Image.objects.filter(loc__name=location).all()
+        return images
 
     @classmethod
     def all_images(cls):
-        images = cls.objects.all
+        images = cls.objects.all()
         return images
     
     @classmethod
     def copy_image(cls,image_id):
         image_found = Image.find_by_id(image_id)
-        pyperclip.copy(image_found.email)
+        pyperclip.copy(image_found.image)
 
 

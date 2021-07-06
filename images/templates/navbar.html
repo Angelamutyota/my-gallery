@@ -27,6 +27,17 @@
     </div>
     <!-- search form end -->
   </div>
+  <form class="navbar-form navbar-right" action="{% url 'location'%}">
+    <select name = "location"class="form-control form-control-lg">
+        <option selected>Select location </option>
+        <option value = "Dubai">Dubai</option>
+        <option value = "South-Africa">South-Africa</option>
+        <option value = "Mumbai">Mumbai</option>
+        <option value = "machakos">machakos</option>
+      </select>
+      <input type="submit" value="Search" class="btn btn-default">
+   </form>  
+    
 </nav>
 </body>
 </html>

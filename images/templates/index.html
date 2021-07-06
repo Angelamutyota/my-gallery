@@ -1,32 +1,24 @@
-{% extends  'base.html'%}
-
+{% extends 'base.html'%}
 {% block content %}
-    <body style="background-image: url(https://i.pinimg.com/originals/d4/fa/9b/d4fa9b466a8e56f619ff160ad8fea3fd.jpg); background-size: 100%;">
-    <div class="container-fluid">
-    <div class="jumbotron" style="background-image: url(https://image.freepik.com/free-vector/bokeh-grey-background_1128-1.jpg); background-size: 100%; ">
-        <h1 class="text-light">Welcome To My Gallery</h1>
-    </div>
-</div>
+{% for image in images %}
+<body style="background-image: url(https://static.vecteezy.com/system/resources/thumbnails/000/574/569/small/poly-nogra-150-g21-32_28302_29.jpg);">
+    
 <div class="container-fluid">
-    <div class="row">
-    {% for image in images %}
-    <div class="card-columns" >
-        <div class="col-sm-6 col-sm-6">
-         <div class="card"  data-toggle="modal" data-target="#{{image.id}}"  >
-           <img src="{{image.image.url}}" alt="{{image.name}}" class="card-img" width="300px" height="300px">
-           <h2>{{image.name}}</h2>
-           <p>{{image.desc}}</p>
-         </div>
-        </div>
-    </div>
- </div>
+
+<div class="row">
+    <div class="col-xs-18 col-sm-6 col-md-3">
+    <div class="thumbnail" data-toggle="modal" data-target="#{{image.id}}">
+    <img src="{{image.image.url}}" alt="{{image.name}}" class="img-fluid img-thumbnail"  style="width:500px; height: 300px;">
+    <h2> <b>{{image.name}}</b></h2>
+    <!-- <p>{{image.desc}}</p> -->
 </div>
-    <div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
+</div>
+<div class="modal fade " id="{{image.id}}" tabindex="-1" role="dialog"
          aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-md" role="document">
             <div class="modal-content modalcard">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="imageheader">{{image.name}}</h5>
+                    <h2 class="modal-title" id="imageheader">{{image.name}}</h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -47,19 +39,23 @@
             </div>
         </div>
     </div>
-    {% endfor %}
-    </div>
- </div>
+{%endfor%}
 </div>
-<script>
-    function copyImage() {
-      var copyText = document.getElementById("myInput");
-      copyText.select();
-      copyText.setSelectionRange(0, 99999)
-      document.execCommand("copy");
-      alert("Copied the text: " + copyText.value);
-    }
-</script>
-    
+</div>
 </body>
+
+ <footer>
+   <script>
+        function copyImage() {
+          var copyText = document.getElementById("myInput");
+          copyText.select();
+          copyText.setSelectionRange(0, 99999)
+          document.execCommand("copy");
+          alert("Copied the text: " + copyText.value);
+        }
+    </script>
+ <h4 class="text-center">Angela 2021</h4>
+
+ </footer>
+</div>
 {%endblock%}
